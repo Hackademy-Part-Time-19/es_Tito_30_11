@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./ingettaCard.css">
+    
+</head>\
+
+<body>
+    <div class="containerInput">
+        <input type="text" id="titolo" placeholder="Titolo"></input>
+        <input type="text" id="testo" placeholder="Testo"></input>
+        <button onclick="createCard()" id="button">Crea Articolo</button>
+
+    </div>
+
+    <div  id="containerCard">
+        
+
+    </div>
+
+
+    <script>
+
+        function createCard(){
+
+        document.getElementById("containerCard").innerHTML += `<div style = " width: 200px;height: 200px;margin: 10px; background-color: rgb(70, 69, 69); border-radius: 10px; display: flex; justify-content: center; align-items: center; flex-direction: column;"  class='card'><h1>` + document.getElementById("titolo").value + "</h1><p>" + document.getElementById("testo").value + "</p></div>";
+        }
+    </script>
+
+</body>
+
+</html>

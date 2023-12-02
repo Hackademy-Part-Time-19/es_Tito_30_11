@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./timerImmagine.css">
+    <script src="./timerImmagine.js"></script>
+</head>
+
+<body >
+
+    <div id="containerCountdown" >
+        <h1 onmousemove="timer()" id="countdown">5</h1>
+    </div>
+
+
+
+
+    <script>
+        
+        function timer() {
+            let countdown = document.getElementById("countdown");
+            let secondi = 5;
+            let timer = setInterval(function () {
+                secondi--;
+                countdown.innerHTML = secondi;
+                if (secondi <= 0) {
+                    clearInterval(timer);
+  
+               document.getElementById("containerCountdown").style.backgroundImage = "url('./media/javascript-custom-events.jpg')";
+               document.getElementById("containerCountdown").style.backgroundSize = "auto";
+                document.getElementById("containerCountdown").style.backgroundRepeat = "no-repeat";
+                document.getElementById("countdown").style.display = "none";
+                document.getElementById("containerCountdown").style.opacity = "1";
+                }
+            }, 1000);
+        }
+    </script>
+
+</body>
+
+</html>

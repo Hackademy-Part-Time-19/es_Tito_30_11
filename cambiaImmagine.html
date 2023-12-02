@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./cambiaImmagine.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <img id="immagine"
+            src="https://tecnicafotografica.net/wp-content/uploads/2020/05/zajdgnxsmeg-e1590956555206.jpg" alt="">
+
+    </div>
+
+</body>
+
+
+
+
+<script>
+
+    let indiceImmagine = 2;
+
+
+    setInterval(() => {
+        if (indiceImmagine == 1) {
+
+            document.getElementById("immagine").style.opacity = "0";
+
+            setTimeout(() => {
+
+                document.getElementById("immagine").src = "https://tecnicafotografica.net/wp-content/uploads/2020/05/zajdgnxsmeg-e1590956555206.jpg";
+
+                document.getElementById("immagine").style.opacity = "1";
+            }, 700);
+
+            indiceImmagine++;
+
+        } else if (indiceImmagine == 2) {
+
+            document.getElementById("immagine").style.opacity = "0";
+
+            setTimeout(() => {
+
+                document.getElementById("immagine").src = "https://i0.wp.com/tecnicafotografica.net/wp-content/uploads/2023/08/Depositphotos_121817610_S.jpg?w=1000&ssl=1";
+
+                document.getElementById("immagine").style.opacity = "1";
+            }, 700);
+
+            indiceImmagine++;
+
+        } else if (indiceImmagine == 3) {
+
+            document.getElementById("immagine").style.opacity = "0";
+
+            setTimeout(() => {
+
+                document.getElementById("immagine").src = "https://i0.wp.com/tecnicafotografica.net/wp-content/uploads/2020/05/4v8jxijgz_c.jpg?resize=1536%2C1022&ssl=1";
+
+                document.getElementById("immagine").style.opacity = "1";
+            }, 700);
+
+            indiceImmagine = 1;
+        }
+    }, 3000);
+
+
+</script>
+
+</html>
